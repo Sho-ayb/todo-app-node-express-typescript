@@ -1,0 +1,25 @@
+@use "../base/variables" as variables;
+
+body {
+  header {
+    width: 100%;
+    padding: variables.$spacing-2xl;
+    background-color: variables.$color-background-dark-1;
+    color: variables.$color-text-light-1;
+
+    > h3 {
+      a {
+        color: variables.$color-text-light-1;
+      }
+
+      a:hover {
+        color: variables.$color-text-darker-1;
+      }
+    }
+
+    > p {
+      font-size: variables.$font-size-md;
+      padding: variables.$spacing-sm;
+    }
+  }
+}

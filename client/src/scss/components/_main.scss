@@ -1,0 +1,105 @@
+@use "../base/variables" as variables;
+
+body {
+  main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: variables.$color-background-dark-1;
+    display: flex;
+    justify-content: space-between;
+
+    #app {
+      width: 100%;
+      justify-content: flex-start;
+    }
+
+    #response__console {
+      width: 90%;
+      margin: variables.$spacing-2xl auto;
+      padding: variables.$spacing-xl;
+      background-color: variables.$color-background-dark-2;
+
+      @media (width >= 78.125rem) {
+        width: 50%;
+      }
+
+      .console__display {
+        font-size: variables.$font-size-xl;
+        color: variables.$color-text-light-1;
+        text-align: center;
+      }
+    }
+
+    .todo__list {
+      width: 100%;
+      min-height: 25%;
+      padding: variables.$spacing-xl;
+
+      .todo__item {
+        width: 100%;
+        padding: variables.$spacing-xl;
+        margin-bottom: variables.$spacing-md;
+        background-color: variables.$color-background;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .todo__icons {
+          justify-content: center;
+          align-items: center;
+
+          > i {
+            font-size: variables.$font-size-2xl;
+            padding: variables.$spacing-xs;
+            transition: all 0.2s;
+          }
+
+          .checkbox__container {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            width: 3.5em;
+            height: 2.5em;
+          }
+
+          .hidden__checkbox {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 50%;
+            top: 50%;
+            margin: 0;
+            z-index: 1;
+            cursor: pointer;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+          }
+
+          .checkbox__icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: variables.$font-size-2xl;
+            padding: variables.$spacing-xs;
+            pointer-events: none;
+          }
+        }
+
+        @media (width >= 48rem) {
+          width: 65%;
+          margin: variables.$spacing-md auto;
+        }
+
+        > h2 {
+          font-size: variables.$font-size-lg;
+        }
+
+        .strikethrough {
+          text-decoration: line-through;
+          text-decoration-color: variables.$color-strikethrough;
+        }
+      }
+    }
+  }
+}

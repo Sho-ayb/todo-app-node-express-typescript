@@ -1,0 +1,30 @@
+@use "../base/variables" as variables;
+
+body {
+  main {
+    #app {
+      #form__input {
+        .form__control {
+          font-size: variables.$font-size-md;
+          padding: variables.$spacing-md 0;
+
+          > label {
+            color: variables.$color-text-light-1;
+          }
+
+          #description {
+            width: 100%;
+            padding: variables.$spacing-sm;
+            margin-top: variables.$spacing-md;
+          }
+        }
+      }
+
+      button {
+        font-size: variables.$font-size-sm;
+        padding: variables.$spacing-sm;
+        float: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Title Goes Here</title>
+  </head>
+  <body>
+    <header>
+      <h1>Webpack Setup - Node Express & Typescript</h1>
+      <h2>
+        This is a test to integrate the client-side with the server-side using
+        an express server.
+      </h2>
+      <h3>
+        This project was part of the course Understanding Typescript by Max
+        Schwartzmuller
+      </h3>
+      <h3>
+        To run this project navigate to project directory and run the following
+        commands in separate terminals - you will need Nodejs installed:
+        <a href="https://nodejs.org/en" target="#">Nodejs</a>
+      </h3>
+      <p>npm run watch</p>
+      <p>npm run start:nodemon</p>
+    </header>
+    <main>
+      <template id="form__template">
+        <form>
+          <div class="form__control">
+            <label for="description">Description</label>
+            <input type="text" id="description" />
+          </div>
+          <button type="submit">Add Todo</button>
+        </form>
+      </template>
+
+      <template id="console__template">
+        <div id="dev__console">
+          <p class="console__display"></p>
+        </div>
+      </template>
+
+      <template id="todo__template">
+        <ul class="todo__list"></ul>
+      </template>
+
+      <template id="todo-item__template">
+        <li class="todo__item [ dflex ]">
+          <h2></h2>
+          <div class="todo__icons [ dflex ]">
+            <label for="checkbox" class="checkbox__container">
+              <input type="checkbox" class="hidden__checkbox" />
+              <i class="bx bx-check-circle"></i>
+            </label>
+            <i class="bx bxs-edit-alt bx-tada-hover"></i>
+            <i class="bx bxs-trash-alt bx-flashing-hover"></i>
+          </div>
+        </li>
+      </template>
+
+      <!-- Elements will be rendered in the element app -->
+      <div id="app" class="[ space-around-sm flex-center flex-column ]"></div>
+    </main>
+  </body>
+</html>

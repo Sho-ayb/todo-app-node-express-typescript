@@ -1,0 +1,19 @@
+@use "../base/variables" as variables;
+
+.space-around-sm {
+  padding: variables.$spacing-lg;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dflex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
